@@ -52,5 +52,5 @@ else{
 
 // Strict match of isnan on given number 
 console.log('checking by isnan -> ',isNaN('123'))
-console.log('strictly checking by Number.isnan by string number -> ',Number.isNaN(true))
+console.log('strictly checking by Number.isnan by string number -> ',Number.isNaN(truee))
 console.log('strictly checking by Number.isnan by numerical number -> ',Number.isNaN(123))

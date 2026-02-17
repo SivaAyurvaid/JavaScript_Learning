@@ -68,4 +68,70 @@ UseCases
 3. Comparing isNaN Vs Number.isNaN
 
 
+#### Equality Opertor
+
+1. == Equality Operator (Checks equality of same object regards of its data type) i.e 3 == '3' This case string 3 is equal to number 3 
+(Checks only content not on datatype)
+
+2. === Strict Equality Operator (Same of above but It checks data type also of equality validation)
+
+
+#### HOISTING
+
+Declaration on Top (After assigning varialbes in program Even out of scope)
+
+There are 2 Phases in Javascript 
+- Compilation phase
+- Execution phase 
+
+
+**Compilation phase**
+
+- It runs through whole line of code in program 
+(Takes out Assigned variables and Functions in program)
+
+If variables assgined with keyword VAR, {
+    In Compiler region Marked as Undefined 
+
+    i.e 
+
+    ```javascript
+    console.log('Before assigning varialbe by var a = 10;', a)
+    var a = 10;
+    console.log('Variable assigned with keyword var a = 10;', a)
+
+    ```
+
+    ```output
+    Before assigning varialbe by var a = 10; undefined
+    Variable assigned with keyword var a = 10; 10
+    ```
+
+    SCOPE OF VARIALBE = FUNCTION OR GLOBALS
+}
+If varialbes assigned with keyword const, let {
+    In Compiler region marked as Temporal dead zone
+
+    ```javascript 
+    console.log('\n LET KEYWORD HOISTING\n')
+    console.log('Before assigning varialbe by let b = 10;', b) 
+    let b = 10;
+    console.log('Variable assigned with keyword let b = 10;', b)
+
+    ```
+
+    ```output
+
+    Expects an error of ReferenceError: Cannot access 'b' before initialization
+
+    ```
+    SCOPE OF VARIABLES = BLOCK
+    Because In compilation phase all let variables available but in temporal dead zone
+    which means Before value is not assigned in execution phase, Let variable is not accessible in code
+}
+
+**Execution phase** 
+
+Each variables which mentioned in Compilation phase assigned value stored in execution phase
+
 ### 2. Functions 
